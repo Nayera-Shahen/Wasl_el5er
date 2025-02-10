@@ -1,0 +1,159 @@
+* {
+    font-family: 'Adelle Sans ARA', sans-serif;
+    font-weight: 600;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/src/assets/images/bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 420px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.login-icon img {
+    margin-bottom: 10px;
+    width: 50px; /* حجم أيقونة تسجيل الدخول */
+}
+
+.login-header h2 {
+    margin: 10px 0;
+    color: #214570;
+    font-size: 30px;
+}
+
+.login-header p {
+    color: #214570;
+    font-size: 15px;
+}
+
+.login-header a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: right;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #214570;
+}
+
+.login-form input {
+    width: 100%; /* تأكد أن العرض موحد */
+    padding: 12px; /* نفس الحشو */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* نفس الانحناء */
+    font-size: 14px;
+    box-sizing: border-box; /* لتجنب اختلاف الحواف */
+}
+
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+  user-select: none;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #214570;
+    text-align: right;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+.login-button {
+    background-color: #0D8F75;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #056b57;
+}
+
+input::placeholder {
+    direction: rtl; 
+    text-align: right; 
+  }
+  
+
+/* login.css */
+.custom-alert {
+    background-color: #f1f3f5; /* لون الخلفية */
+    color: #212529; /* لون النص */
+    border: 1px solid #dee2e6; /* لون وحجم الإطار */
+    border-radius: 8px; /* زوايا دائرية */
+    padding: 10px 15px; /* مسافة داخلية */
+    font-size: 16px; /* حجم النص */
+    font-weight: bold; /* وزن النص */
+    text-align: center; /* محاذاة النص */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* ظل بسيط */
+    margin: 15px 0; /* مسافة بين التنبيه والعناصر الأخرى */
+    animation: fade-in 0.5s ease-in-out; /* حركة تنبيه ناعمة */
+  }
+  
+  /* حركة الظهور التدريجية */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
