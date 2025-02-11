@@ -8,7 +8,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/src/assets/images/bg.png');
+    background-image: url('/public/images/bg.png');
+
     background-size: cover;
     background-position: center;
 }
@@ -69,30 +70,44 @@
     box-sizing: border-box; /* لتجنب اختلاف الحواف */
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
 
 .password-input {
     position: relative;
+    display: flex;
 }
 
 .password-input input {
     width: 100%;
-    padding: 12px;
+    padding-right: 10px; /* مسافة صغيرة بين النص والحافة */
+    padding-left: 40px;
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 14px;
     box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
   }
 
 .toggle-password {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 18px;
   color: #888;
   user-select: none;
+  margin-left: 5px;
+  background: none;
+  border: none;
 }
+  
 
 .forgot-password {
     font-size: 12px;

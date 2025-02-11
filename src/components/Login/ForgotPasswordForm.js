@@ -6,7 +6,7 @@ const ForgotPasswordForm = ({ onNext }) => {
       <div className="login-header">
         <div className="login-icon">
           <img
-            src={require("../../assets/images/loginIcon.png")}
+            src={`${process.env.PUBLIC_URL}/images/loginIcon.png`}
             alt="Forgot Password Icon"
           />
         </div>
