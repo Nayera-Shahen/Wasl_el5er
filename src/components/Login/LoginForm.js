@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 const LoginForm = ({ onForgotPassword }) => {
   const [email, setEmail] = useState("");
@@ -19,7 +21,6 @@ const LoginForm = ({ onForgotPassword }) => {
     e.preventDefault();
     let isValid = true;
 
-    // التحقق من البريد الإلكتروني
     if (!email.includes("@")) {
       setEmailError("البريد الإلكتروني غير صالح");
       isValid = false;
@@ -27,7 +28,6 @@ const LoginForm = ({ onForgotPassword }) => {
       setEmailError("");
     }
 
-    // التحقق من كلمة المرور
     if (password.length < 6) {
       setPasswordError("كلمة المرور يجب أن تكون 6 أحرف على الأقل");
       isValid = false;
@@ -38,7 +38,6 @@ const LoginForm = ({ onForgotPassword }) => {
     if (isValid) {
       console.log("تم تسجيل الدخول بنجاح");
       navigate("/home");
-      // تنفيذ طلب تسجيل الدخول هنا
     }
   };
 
@@ -74,9 +73,16 @@ const LoginForm = ({ onForgotPassword }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <span className="toggle-password" onClick={togglePasswordVisibility}>
-            {showPassword ? "إخفاء" : "عرض"}
-          </span>
+          <button
+            type="button"
+            className="toggle-password"
+            onClick={togglePasswordVisibility}
+          >
+            <FontAwesomeIcon
+              icon={showPassword ? faEye : faEyeSlash}
+              aria-hidden="true"
+            />
+          </button>
         </div>
         {passwordError && <p className="error-message">{passwordError}</p>}
 
@@ -102,6 +108,7 @@ const LoginForm = ({ onForgotPassword }) => {
 };
 
 export default LoginForm;
+
 
 
 

@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ForgotPasswordForm = ({ onNext }) => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const validateEmail = () => {
+    if (!email.includes("@")) {
+      setError("يرجى إدخال بريد إلكتروني صحيح");
+    } else {
+      setError("");
+      onNext();
+    }
+  };
+
   return (
     <div className="login-box">
       <div className="login-header">
@@ -16,14 +28,23 @@ const ForgotPasswordForm = ({ onNext }) => {
           بياناتك واضغط على التالي."
         </p>
       </div>
-      <form className="login-form">
+      <form
+        className="login-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          validateEmail();
+        }}
+      >
         <label htmlFor="reset-email">أدخل البريد الإلكتروني *</label>
         <input
           type="email"
           id="reset-email"
           placeholder="أدخل البريد الإلكتروني المسجل لإعادة تعيين كلمة المرور"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <button type="button" className="login-button" onClick={onNext}>
+        {error && <p className="error-message">{error}</p>}
+        <button type="button" className="login-button" onClick={validateEmail}>
           التالي
         </button>
       </form>
@@ -32,3 +53,4 @@ const ForgotPasswordForm = ({ onNext }) => {
 };
 
 export default ForgotPasswordForm;
+

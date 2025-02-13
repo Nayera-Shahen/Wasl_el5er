@@ -9,7 +9,6 @@
     align-items: center;
     height: 100vh;
     background-image: url('/public/images/bg.png');
-
     background-size: cover;
     background-position: center;
 }
@@ -24,18 +23,19 @@
 }
 
 .login-header {
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }
 
 .login-icon img {
     margin-bottom: 10px;
-    width: 50px; /* حجم أيقونة تسجيل الدخول */
+    width: 50px; 
 }
 
 .login-header h2 {
     margin: 10px 0;
     color: #214570;
     font-size: 30px;
+    font-family: "Adelle Sans ARA Semibold";
 }
 
 .login-header p {
@@ -62,12 +62,12 @@
 }
 
 .login-form input {
-    width: 100%; /* تأكد أن العرض موحد */
-    padding: 12px; /* نفس الحشو */
+    width: 100%; 
+    padding: 12px; 
     border: 1px solid #ddd;
-    border-radius: 10px; /* نفس الانحناء */
+    border-radius: 10px; 
     font-size: 14px;
-    box-sizing: border-box; /* لتجنب اختلاف الحواف */
+    box-sizing: border-box; 
 }
 
 .error-message {
@@ -84,7 +84,7 @@
 
 .password-input input {
     width: 100%;
-    padding-right: 10px; /* مسافة صغيرة بين النص والحافة */
+    padding-right: 10px; 
     padding-left: 40px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -107,6 +107,10 @@
   background: none;
   border: none;
 }
+
+.toggle-password:hover {
+    color: #214570;
+  }
   
 
 .forgot-password {
@@ -133,6 +137,11 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
+.login-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 106, 0.5);
+  }
+  
 
 .login-button:hover {
     background-color: #056b57;
@@ -144,19 +153,19 @@ input::placeholder {
   }
   
 
-/* login.css */
+
 .custom-alert {
-    background-color: #f1f3f5; /* لون الخلفية */
-    color: #212529; /* لون النص */
-    border: 1px solid #dee2e6; /* لون وحجم الإطار */
-    border-radius: 8px; /* زوايا دائرية */
-    padding: 10px 15px; /* مسافة داخلية */
-    font-size: 16px; /* حجم النص */
-    font-weight: bold; /* وزن النص */
-    text-align: center; /* محاذاة النص */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* ظل بسيط */
-    margin: 15px 0; /* مسافة بين التنبيه والعناصر الأخرى */
-    animation: fade-in 0.5s ease-in-out; /* حركة تنبيه ناعمة */
+    background-color: #f1f3f5; 
+    color: #212529; 
+    border: 1px solid #dee2e6; 
+    border-radius: 8px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 15px 0; 
+    animation: fade-in 0.5s ease-in-out; 
   }
   
   /* حركة الظهور التدريجية */
@@ -171,4 +180,38 @@ input::placeholder {
     }
   }
   
+
+/* Responsive Design */
+  @media (max-width: 768px) {
+    .login-box {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    .login-header img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .login-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-header img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .login-form input {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .login-button {
+      font-size: 0.85rem;
+      padding: 10px;
+    }
+  }
   
